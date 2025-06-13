@@ -13,10 +13,12 @@ export const waitFor = async (data, ms = 500) =>
   export const addTask = async (task) => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const newTask = {
-      id: crypto.randomUUID(), // Benzersiz bir ID oluştur
+      id: task.id, // Benzersiz bir ID oluştur
       name: task.name || "Untitled Task", // Eğer name yoksa varsayılan değer ata
       description: task.description || "No description", // Aynı şekilde description da kontrol edilmeli
       completed: task.completed ?? false, // Eğer completed verilmediyse false olsun
+      //tarih alanı ekleyelim
+      dueDate:task.dueDate || new Date().toISOString().split("T")[0], //bugünün tarihini ekle
     };
 
     tasks.push(newTask);

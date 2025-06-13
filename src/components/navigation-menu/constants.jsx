@@ -1,6 +1,8 @@
 import { RxDashboard } from "react-icons/rx";
 import { RiTaskLine, RiSettings5Line } from "react-icons/ri";
 import { AiOutlineProject } from "react-icons/ai";
+import { GoStopwatch } from "react-icons/go";
+
 
 export const MENU = [
   {
@@ -26,5 +28,11 @@ export const MENU = [
     icon: <RiSettings5Line />,
     title: "Settings",
     href: "/settings",
+  },
+  {
+    id: 4,
+    icon: <GoStopwatch />,
+    title: "Pomodoro",
+    href: "/pomodoro",
   },
 ];

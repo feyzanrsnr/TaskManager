@@ -38,3 +38,10 @@ export const EditButton = styled(Link)`
   padding: var(--space-m);
   border-radius: var(--border-radius-s);
 `;
+
+export const DeleteButton = styled(Link)`
+  background-color: var(--dark-blue);
+  padding: var(--space-m);
+  margin-left : var(--space-m);
+  border-radius: var(--border-radius-s);
+`;

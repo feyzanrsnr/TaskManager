@@ -42,3 +42,22 @@ export const Button = styled(Link)`
   padding: var(--space-m) var(--space-xl);
   border-radius: var(--border-radius-s);
 `;
+
+export const ButtonDiv = styled.div`
+  display:flex;
+  margin:var(--space-s);
+`;
+
+export const FilterButton = styled(Link)`
+  background-color: transparent;
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  padding: var(--space-m) var(--space-xl);
+  border-radius: var(--border-radius-l);
+  margin: var(--space-m);
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--green-opaque);
+  }
+`;

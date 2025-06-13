@@ -6,6 +6,9 @@ import { CreateTaskPage, createTaskPageSubmitAction } from "../pages/create-task
 import { TaskPage,taskPageLoader ,taskPageUpdateAction} from "../pages/task-page";
 import {EditTaskPage,editTaskPageLoader,editTaskPagePutAction} from '../pages/edit-task-page'
 import { ProjectsPage } from "../pages/projects-page";
+import { SettingsPage } from "../pages/settings-page";
+import { PomodoroPage } from "../pages/pomodoro-page";
+import RegisterForm from "../pages/register-page";
 
 const router = createBrowserRouter([
     {
@@ -15,6 +18,10 @@ const router = createBrowserRouter([
             {
                index:true,
                element:<HomePage/> 
+            },
+            {
+                path:'/register',
+                element:<RegisterForm/>
             },
             {
                 path:'/tasks',
@@ -41,6 +48,14 @@ const router = createBrowserRouter([
             {
                 path: "/projects",
                 element: <ProjectsPage />,
+            },
+            {
+                path: "/settings",
+                element: <SettingsPage />,
+            },
+            {
+                path: "/pomodoro",
+                element: <PomodoroPage />,
             },
          
            

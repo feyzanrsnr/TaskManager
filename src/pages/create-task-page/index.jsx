@@ -12,9 +12,9 @@ function CreateTaskPage() {
 export const createTaskPageSubmitAction = async ({request}) => {
     const formData = await request.formData();
 
-    const id = Math.random().toString(36).substring(3,12);
-    const name = console.log(formData.get("task-name"));
-    const description = console.log(formData.get("task-description"));
+    const id = crypto.randomUUID();
+    const name = formData.get("task-name");
+    const description = formData.get("task-description");
 
     await addTask({
         id,
